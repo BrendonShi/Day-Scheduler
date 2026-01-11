@@ -1,6 +1,6 @@
 # Day Timer
 
-![msedge_88uUC2o0bI](https://github.com/user-attachments/assets/fa9f9eea-97b3-4eab-b733-a0a0cbf330b9)
+![NVIDIA_Overlay_6eUH37isLV](https://github.com/user-attachments/assets/48626073-fa57-4e18-9a36-7239cd771ab4)
 
 It is a simple, effective productivity tool built with Flask, HTML, CSS, and JavaScript. It allows you to schedule specific time blocks and plays a custom alarm sound at the start and end of every task.
 
