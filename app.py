@@ -1,28 +1,10 @@
-import sqlite3
+import os
 from flask import Flask, render_template, request, jsonify
+from get_db import get_db_connection, init_db
+
 
 app = Flask(__name__)
 
-def get_db_connection():
-    conn = sqlite3.connect('schedule.db')
-    conn.row_factory = sqlite3.Row
-    return conn
-
-def init_db():
-    conn = get_db_connection()
-    conn.execute('''
-        CREATE TABLE IF NOT EXISTS tasks (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL,
-            start_time TEXT NOT NULL,
-            end_time TEXT NOT NULL,
-            color TEXT NOT NULL
-        )
-    ''')
-    conn.commit()
-    conn.close()
-
-init_db()
 
 @app.route('/')
 def home():
@@ -33,7 +15,7 @@ def get_tasks():
     conn = get_db_connection()
     tasks = conn.execute('SELECT * FROM tasks').fetchall()
     conn.close()
-    
+
     tasks_list = [{
         'id': row['id'], 
         'name': row['name'], 
@@ -65,4 +47,5 @@ def delete_task():
     return jsonify({'status': 'deleted'})
 
 if __name__ == '__main__':
+    init_db()
     app.run(debug=True, port=5000)
