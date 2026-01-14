@@ -36,6 +36,18 @@ You need to launch `setup.command`, but first, you must give it permission to ru
 
 ## How to Run
 
+1. **Activate Venv:**
+   
+   (Windows)
+   ```bash
+   ./venv/Scripts/activate
+   ```
+
+   (MacOS)
+   ```bash
+   source .venv/bin/activate
+   ```
+   
 1.  **Start the Application:**
     Run the following command in your terminal:
     ```bash
