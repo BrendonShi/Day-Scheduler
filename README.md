@@ -60,7 +60,7 @@ If you want to clear all tasks or if you encounter database errors after changin
 ```text
 day-scheduler/
 ├── app.py
-├── schedule.db   # will generate automatically
+├── get_db.py
 ├── static/
 │   ├── style.css
 │   ├── script.js
