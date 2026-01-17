@@ -2,12 +2,12 @@
 
 ![NVIDIA_Overlay_6eUH37isLV](https://github.com/user-attachments/assets/48626073-fa57-4e18-9a36-7239cd771ab4)
 
-It is a simple, effective productivity tool built with Flask, HTML, CSS, and JavaScript, with PostgreSQL database. It allows you to schedule specific time blocks and plays a custom alarm sound at the start and end of every task.
+It is a simple, effective productivity tool built with Flask, HTML, CSS, and JavaScript, with Sqlite3 database. It allows you to schedule specific time blocks and plays a custom alarm sound at the start and end of every task.
 
-All schedules are automatically saved to a postgres database, which in this case is connected to an online hosting server "console.neon.tech" (so you do not need to install PostgreSQL on your local machine).
+All schedules are automatically saved to a sqlite3 database.
 
 ## Prerequisites
-You need **Python**, **Flask** installed on your computer.
+You need **Python** installed on your computer.
 
 ## Installation
 
@@ -47,7 +47,7 @@ You need to launch `setup.command`, but first, you must give it permission to ru
    ```bash
    source .venv/bin/activate
    ```
-   
+
 1.  **Start the Application:**
     Run the following command in your terminal:
     ```bash
@@ -75,6 +75,11 @@ If you want to clear all tasks or if you encounter database errors after changin
 day-scheduler/
 ├── app.py
 ├── get_db.py
+├── schedule.db
+├── setup.bat
+├── setup.command
+├── requirements.txt
+├── .env
 ├── static/
 │   ├── style.css
 │   ├── script.js
