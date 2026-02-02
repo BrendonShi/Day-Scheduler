@@ -1,4 +1,4 @@
-# Day Scheduler
+# To-Do List Website
 
 ![NVIDIA_Overlay_6eUH37isLV](https://github.com/user-attachments/assets/48626073-fa57-4e18-9a36-7239cd771ab4)
 
@@ -17,7 +17,7 @@ You need **Python** installed on your computer.
    ```
 2. **Navigate to the project folder** in your terminal/command prompt:
    ```bash
-   cd day-scheduler
+   cd to-do-list-website
    ```
 
 ### (Windows)
@@ -72,7 +72,7 @@ If you want to clear all tasks or if you encounter database errors after changin
 ## Project Structure
 
 ```text
-day-scheduler/
+to-do-list-website/
 ├── app.py
 ├── get_db.py
 ├── schedule.db
